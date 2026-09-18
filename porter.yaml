@@ -10,11 +10,11 @@ languages:
 
 name: cspell
 type: config
-description: Shared spelling dictionaries for Aurora repositories.
+description: Shared spelling dictionaries for Workspace repositories.
 
 #
 # component remote resources
 #
 
-github: "eikuro"
+github: "organisation"
 ci: ""

@@ -35,9 +35,6 @@ deepseek
 # DeerFlow workflow and agent-tooling name.
 deerflow
 
-# Repository owner for the PyMap project.
-eikuro
-
 # VS Code Run on Save extension publisher.
 emeraldwalk
 
@@ -264,8 +261,6 @@ Vikunja
 
 # VS Code ESLint extension publisher.
 dbaeumer
-# GitHub account name of the repository owner, as written in the licence.
-Eikuro
 # Jsonnet VS Code extension publisher.
 grafana
 # Kanban Markdown upstream extension publisher.

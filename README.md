@@ -4,12 +4,12 @@
 </p>
 
 <h3 align="center">cspell</h3>
-<p align="center">Shared spelling dictionaries for Aurora repositories.</p>
+<p align="center">Shared spelling dictionaries for Workspace repositories.</p>
 <!-- markdownlint-enable MD033 MD041 -->
 
 ## Purposes
 
-This README is the entry point to Aurora's shared cspell vocabulary.
+This README is the entry point to Workspace's shared cspell vocabulary.
 
 The repository keeps approved terms separate from consumer configuration:
 consumer repositories own their file coverage, language settings, and ignore
