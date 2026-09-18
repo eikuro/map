@@ -1,16 +1,20 @@
-# yaml-language-server: $schema=../porter/schemas/manifest.json#agents-location
+# yaml-language-server: $schema=../porter/schemas/manifest.json
 ---
 #
 # component metadata
 #
 private: false
 
-name: map
+languages:
+  - markdown
+
+name: cspell
 type: config
-description: Shared base configuration for the language maps.
+description: Shared spelling dictionaries for Aurora repositories.
+
+#
+# component remote resources
+#
 
 github: "eikuro"
-
 ci: ""
-
-agents: ../.agents
