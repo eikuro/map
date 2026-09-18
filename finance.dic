@@ -1,0 +1,553 @@
+#
+## Financial fields and trading analytics
+#
+
+# SEC filing accession number.
+accn
+# Adjusted closing price.
+adjclose
+# As-of prefix used in point-in-time field names.
+asof
+# Date used as the observation or valuation reference date.
+asofdate
+# Capitalized form of a historical strategy simulation.
+Backtest
+# Historical simulation of a trading strategy.
+backtest
+# Tool or workflow that runs historical strategy simulations.
+backtester
+# Process of evaluating a strategy on historical data.
+backtesting
+# Collection of historical strategy evaluations.
+backtests
+# Metric recorded against a reference baseline.
+baselined
+# Standard exchange-trading unit.
+boardlot
+# Number of units in a board lot.
+boardlotsize
+# Bollinger Bands technical indicator.
+bollinger
+# Capacity-expansion cycle, as in the AI capex buildout.
+buildout
+# Compound annual growth rate in uppercase prose.
+CAGR
+# Compound annual growth rate.
+cagr
+# Calmar ratio of return to maximum drawdown.
+Calmar
+# Lowercase form of the Calmar ratio name.
+calmar
+# Capital-expenditure field used as a factor input.
+capex
+# Verb for removing a security from a listing.
+delist
+# Uppercase delisting status variant used in source data.
+DELISTED
+# Security or issuer marked as no longer listed.
+delisted
+# Event in which a security is removed from a listing.
+delisting
+# Collection of delisting events.
+delistings
+# Verb form for removing a security from a listing.
+delists
+# Earnings before interest and taxes.
+EBIT
+# Earnings before interest, taxes, depreciation, and amortization.
+EBITDA
+# Uppercase exchange-traded-fund rotation strategy acronym.
+ETFR
+# Exchange-traded-fund rotation strategy acronym.
+etfr
+# Free-cash-flow compound annual growth rate.
+FCFCAGR
+# Foreign-exchange market or asset class.
+forex
+# Foreign-exchange boundary field or indicator.
+FXBOUND
+# Foreign-exchange correctness task identifier in the financial plan.
+FXSAFE
+# Generally accepted accounting principles.
+gaap
+# International Financial Reporting Standards.
+IFRS
+# Market index, often used as a data label.
+indice
+# Trading data sampled within the trading day.
+intraday
+# Historical period used to calculate a signal or statistic.
+lookback
+# Collection of historical periods used for calculations.
+lookbacks
+# Data-quality term for the rate or pattern of missing values.
+Missingness
+# Lowercase form of the data-quality term for missing values.
+missingness
+# Sentinel for records without an observation date.
+NODATE
+# Open, high, and low market data fields.
+OHLC
+# Open, high, low, close, and volume market data in uppercase prose.
+OHLCV
+# Open, high, low, and close market data fields in lowercase prose.
+ohlc
+# Open, high, low, close, and volume market data.
+ohlcv
+# Uppercase post-earnings-announcement drift strategy or effect.
+PEAD
+# Post-earnings-announcement drift strategy or effect.
+pead
+# As in Pretax Income, a raw financial-data field.
+Pretax
+# Fetch again inside the lookback window after the recorded watermark.
+refetches
+# Issuing securities again after an earlier issuance.
+reissuance
+# Adjustment of portfolio or factor weights after a signal change.
+reweighting
+# Sharpe ratio.
+sharpe
+# Collection of Sharpe-ratio measurements.
+sharpes
+# Standard deviation abbreviation used in factor output column names.
+stddev
+# Uppercase time-series foundation model acronym.
+TSFM
+# Time-series foundation model acronym.
+tsfm
+# Time-weighted average price execution benchmark.
+TWAP
+# Risk that no available instrument offsets.
+unhedgeable
+# Volume-weighted average price.
+vwap
+# Uppercase volume-weighted moving average.
+VWMA
+# Volume-weighted moving average.
+vwma
+# Weighted average cost of capital.
+WACC
+# Uppercase Extensible Business Reporting Language acronym.
+XBRL
+# Extensible Business Reporting Language for financial filings.
+xbrl
+
+#
+## Quantitative models and execution
+#
+
+# Bergomi stochastic-volatility model.
+Bergomi
+# Deep deterministic policy gradient reinforcement-learning algorithm.
+DDPG
+# Feedforward neural-network architecture.
+feedforward
+# Production reinforcement-learning execution system.
+LOXM
+# Long short-term memory neural-network architecture.
+LSTM
+# Model tuning that fits noise instead of signal.
+overfit
+# Process of fitting noise instead of signal.
+overfitting
+# Stochastic-alpha-beta-rho volatility model.
+SABR
+# Stoikov market-making model.
+Stoikov
+
+#
+## Backtest exclusion categories
+#
+
+# ADR removed from a major exchange and treated as a post-event exclusion.
+adr_delisted
+# Bankruptcy restructuring that can break a continuous security history.
+bankrupt_restructure
+# Share-class restructuring that can break a continuous security history.
+class_restructure
+# Broad category for a security that structurally evolved.
+evolved
+# Broad category for a permanently recycled ticker.
+recycled
+# Reverse-merger shell period excluded from operating-company history.
+reverse_merger_shell
+# Broad category for a temporary shell security.
+shell
+# SPAC period before its business combination closes.
+spac_pre_merger
+# Broad category for a security whose trading stopped.
+stopped
+
+#
+## Security identifiers and listing fields
+#
+
+# Beginning of a listing record's lifecycle window.
+active_from
+# End of a listing record's lifecycle window.
+active_to
+# Listing asset classification field.
+asset_type
+# Internal trading-calendar route for a listing.
+calendar_id
+# Central Index Key assigned to an SEC registrant.
+ciks
+# Uppercase SEC company-facts field token.
+COMPANYFACTS
+# Structured company-facts data from SEC filings.
+companyfacts
+# Country of listing field.
+country
+# Trading currency field.
+currency
+# Committee on Uniform Securities Identification Procedures identifier.
+cusip
+# Date a security was removed from an exchange listing.
+delist_date
+# Exchange name or short-code field.
+exchange
+# Global Financial Identifier for a security.
+figi
+# Date a security first traded on an exchange.
+first_trade_date
+# International Securities Identification Number.
+isin
+# Market Identifier Code field.
+mic
+# Human-readable listing name field.
+name
+# Listing-file field containing a security name.
+nameofsecurities
+# Nasdaq-listed securities dataset or field.
+nasdaqlisted
+# Field or file for securities listed on other venues.
+otherlisted
+# Principal security metadata field from a listing dataset.
+principalsmd
+# Unified internal listing identifier field.
+security_id
+# Security code used by a market-data source.
+securitiescode
+# Human-readable security name field.
+securityname
+# Classification field for a security type.
+securitytype
+# Data-source name field.
+source
+# Timestamp of the last source update.
+source_updated_at
+# Stock code used by a market-data source.
+stockcode
+# Human-readable stock name field.
+stockname
+# Exchange ticker symbol field.
+symbol
+# Security-type field used in a listing dataset.
+typeofsecurities
+
+#
+## Listing regions and countries
+#
+
+# Australia region value in the extra-ticker registry.
+australia
+# Canada region value in the extra-ticker registry.
+canada
+# Europe region value in the extra-ticker registry.
+europe
+# Hong Kong region value in the extra-ticker registry.
+kong
+# Korea region value in the extra-ticker registry.
+korea
+# Taiwan region value in the extra-ticker registry.
+taiwan
+
+#
+## Financial instruments and structures
+#
+
+# Callable bull/bear contract.
+cbbc
+# Common stock or ordinary-share asset type.
+equity
+# Exchange-traded fund asset type.
+etf
+# Exchange-traded fund abbreviation.
+etfs
+# Closed-end investment-fund asset type.
+fund
+# Preferred-stock asset type.
+preferred
+# Preferred share or preferred security.
+preferreds
+# Real estate investment trust.
+REIT
+# Real estate investment trust.
+reit
+# Rights-offering asset type.
+right
+# Special purpose acquisition company.
+spac
+# Bundled SPAC security asset type.
+unit
+# Warrant asset type.
+warrant
+
+#
+## Economic series and market context
+#
+
+# Moody's Baa corporate bond yield series code.
+BAA
+# Consumer Price Index for All Urban Consumers series code.
+CPIAUCSL
+# 10-year Treasury Inflation-Indexed Security series code.
+DFII10
+# 10-year Treasury Constant Maturity Rate series code.
+DGS10
+# 2-year Treasury Constant Maturity Rate series code.
+DGS2
+# Region spanning Europe, the Middle East, and Africa.
+EMEA
+# Effective federal funds rate series code.
+FEDFUNDS
+# National Bureau of Economic Research.
+NBER
+# Statistical Data and Metadata eXchange standard.
+SDMX
+# 10-year breakeven inflation rate series code.
+T10YIE
+# 5-year breakeven inflation rate series code.
+T5YIE
+# U.S. unemployment-rate series code.
+UNRATE
+# U.S. recession indicator series code.
+USREC
+# CBOE Volatility Index closing-level series code.
+VIXCLS
+
+#
+## Financial data providers
+#
+
+# Uppercase EOD Historical Data provider name.
+EODHD
+# EODHD market-data provider.
+eodhd
+# Financial Modeling Prep market-data provider.
+financialmodelingprep
+# Finnhub market-data provider.
+Finnhub
+# Archival Federal Reserve Economic Data API for vintage series.
+alfred
+# Federal Reserve Economic Data provider.
+fred
+# Python API client for Federal Reserve data.
+fredapi
+# Intrinio financial-data provider.
+Intrinio
+# Sharadar financial-data dataset or provider.
+sharadar
+# Uppercase Stooq provider name.
+STOOQ
+# Stooq market-data provider.
+stooq
+# Tiingo market-data provider.
+Tiingo
+# Uppercase Yahoo Query client name.
+YAHOOQUERY
+# Python client for Yahoo Finance data.
+yahooquery
+# Yahoo Finance Python client package.
+yfinance
+
+#
+## Issuers, sectors, funds, and securities
+#
+
+# Lowercase AAPL ticker token used in test identifiers and revision slugs.
+aapl
+# ABC-series subscription right ticker used in the Nasdaq fixture.
+ABCR
+# ABC-series unit ticker used in the Nasdaq fixture.
+ABCU
+# ACM Research security ticker.
+ACMR
+# American Financial Group debenture ticker.
+AFGB
+# ASML Holding security ticker or issuer name.
+ASML
+# Bed Bath & Beyond security ticker.
+BBBY
+# Bright Horizons Family Solutions security ticker.
+BFAM
+# Exchange-traded fund brand or ticker name.
+Boxx
+# Churchill Capital Corp IV SPAC ticker.
+CCIV
+# United States Copper Index Fund ticker.
+CPER
+# Fund or security ticker retained from market data.
+DAAA
+# DigitalBridge Group preferred-series ticker.
+DBRG
+# Fund or security ticker retained from market data.
+DFII
+# Discovery Communications class B security ticker.
+DISCB
+# Fastly company or issuer name.
+Fastly
+# Semiconductor company operating model that designs without owning fabs.
+fabless
+# Fund or security ticker retained from market data.
+FACTX
+# Fastly security ticker.
+FSLY
+# SK hynix issuer name.
+hynix
+# MEITU company or issuer name.
+MEITU
+# MEITU security ticker.
+MEIUF
+# Lowercase MSFT ticker token used in test identifiers.
+msft
+# Mullen Automotive security ticker.
+MULN
+# Nuveen investment-management company.
+Nuveen
+# NUVVE security ticker.
+NUVVE
+# Our Bond, Inc. equity ticker used in the Nasdaq fixture.
+OBAI
+# Ocado company or issuer name.
+Ocado
+# Ocado Group security ticker.
+OCDO
+# PLDT security ticker.
+PLDT
+# Platinum-related exchange-traded product ticker.
+PLTM
+# Palantir Technologies security ticker.
+PLTR
+# Pershing Square Tontine Holdings security ticker.
+PSTH
+# Rare-earth and strategic-metals exchange-traded fund ticker.
+REMX
+# Inflation-linked bond exchange-traded fund ticker.
+RINF
+# Schwab U.S. Dividend Equity exchange-traded fund ticker.
+SCHD
+# Schwab U.S. TIPS exchange-traded fund ticker.
+SCHP
+# Schwab intermediate-term Treasury exchange-traded fund ticker.
+SCHR
+# Fund or security ticker retained from market data.
+SETM
+# Soybean commodity fund ticker.
+SOYB
+# State Street SPDR fund family name.
+SPDR
+# ProShares UltraPro Short QQQ ticker.
+SQQQ
+# Fund or security ticker retained from market data.
+SQRX
+# iShares 0-5 Year TIPS Bond ETF ticker.
+STIP
+# Short VIX futures exchange-traded product ticker.
+SVXY
+# Teucrium commodity-fund issuer name.
+Teucrium
+# Short VIX futures exchange-traded product ticker.
+VIXM
+# Short VIX futures exchange-traded product ticker.
+VIXY
+# Vanguard short-term TIPS fund ticker.
+VTIP
+# Real Estate Select Sector SPDR Fund ticker.
+XLRE
+
+#
+## Exchanges, venues, and regulators
+#
+
+# NYSE Arca exchange name.
+Arca
+# NYSE Arca market identifier code.
+ARCX
+# Generic term for an Italian stock exchange.
+Borsa
+# Euronext exchange group name.
+Euronext
+# Financial Industry Regulatory Authority.
+FINRA
+# Hong Kong Exchanges and Clearing.
+hkex
+# Hong Kong Stock Exchange abbreviation.
+HKSE
+# Borsa Italiana exchange name component.
+Italiana
+# Nasdaq Stock Market exchange name.
+NASDAQ
+# Nasdaq listings source slug.
+nasdaq
+# Nasdaq Mutual Fund Quotation Service code.
+NMFQS
+# OTC Bulletin Board venue.
+OTCBB
+# OTC venue code for Canadian securities.
+OTCCE
+# OTC Grey Market venue.
+OTCGREY
+# Generic over-the-counter market abbreviation.
+OTCM
+# OTC Markets venue identifier.
+OTCMKTS
+# OTC Pink venue code.
+OTCPK
+# OTCQB venture-market tier.
+OTCQB
+# OTCQX quality-market tier.
+OTCQX
+# Shenzhen Stock Exchange abbreviation.
+SZSE
+# Euronext Amsterdam market identifier code.
+XAMS
+# NYSE American market identifier code.
+XASE
+# Australian Securities Exchange market identifier code.
+XASX
+# Deutsche Xetra market identifier code.
+XETR
+# Xetra exchange name.
+Xetra
+# Hong Kong Stock Exchange market identifier code.
+XHKG
+# Korea Exchange market identifier code.
+XKRX
+# London Stock Exchange market identifier code.
+XLON
+# Borsa Italiana Milan market identifier code.
+XMIL
+# Nasdaq market identifier code.
+XNAS
+# New York Stock Exchange market identifier code.
+XNYS
+# Euronext Paris market identifier code.
+XPAR
+# OTC Pink market identifier code.
+XPNK
+# Shenzhen Stock Exchange market identifier code.
+XSHE
+# Shanghai Stock Exchange market identifier code.
+XSHG
+# Nasdaq Stockholm market identifier code.
+XSTO
+# SIX Swiss Exchange market identifier code.
+XSWX
+# Taiwan Stock Exchange market identifier code.
+XTAI
+# Tokyo Stock Exchange market identifier code.
+XTKS
+# Toronto Stock Exchange market identifier code.
+XTSE

@@ -1,0 +1,108 @@
+#
+## Geographic datasets and feature attributes
+#
+
+# Natural Earth geographic dataset and package name.
+naturalearth
+# District and place name in geographic feature data.
+Huadu
+# Municipality attribute used in geographic feature records.
+Municip
+# U.S. Geological Survey name or data-source acronym.
+USGS
+
+#
+## Raster formats and image metadata
+#
+
+# Raster tile width in pixels.
+blockxsize
+# Raster tile height in pixels.
+blockysize
+# Spatially referenced to real-world coordinates.
+georeferenced
+# GeoTIFF raster format.
+geotiff
+# Image-information field or utility abbreviation.
+iinfo
+# Precision associated with an image scan line.
+lineprecision
+# Low-resolution raster or image product.
+lowres
+# Maximum horizontal coordinate in an image extent.
+maxx
+# Maximum vertical coordinate in an image extent.
+maxy
+# Minimum vertical coordinate in an image extent.
+miny
+# High-end horizontal coordinate in an image extent.
+xhigh
+# Vertical level in a raster or data cube.
+zlevel
+
+#
+## Remote sensing and land cover
+#
+
+# ATRAN atmospheric transmission model used in remote sensing.
+atran
+# Surface emissivity field.
+emis
+# Remote-sensing field abbreviation used for emissivity data.
+emsd
+# Land-cover or land-use class.
+landclass
+# Landsat Earth-observation satellite program.
+landsat
+# Latitude and longitude coordinate pair.
+latlon
+# Landsat Data Continuity Mission acronym.
+LDCM
+# Long-wave infrared spectral band.
+lwir
+# Angular measurement in Microradian units.
+Microradian
+# Normalized Difference Vegetation Index.
+ndvi
+# Image corrected for terrain and sensor geometry.
+orthorectified
+# Pertaining to radiometric correction of satellite sensor readings.
+radiometrically
+# Short-wave infrared spectral band.
+swir
+# Microradian unit abbreviation.
+urad
+
+#
+## Coordinate systems and geospatial tooling
+#
+
+# EPSG coordinate-reference-system authority code.
+EPSG
+# EPSG coordinate-reference-system authority code.
+epsg
+# Geospatial Data Abstraction Library.
+GDAL
+# Python library for geospatial vector data.
+geopandas
+# Python library for STAC catalogs.
+pystac
+# Python library for geospatial raster I/O.
+rasterio
+# Repartitioning array chunks for parallel processing.
+rechunking
+# xarray extension for raster and coordinate-reference operations.
+rioxarray
+# Uppercase SpatioTemporal Asset Catalog acronym.
+STAC
+# SpatioTemporal Asset Catalog standard.
+stac
+# Library for stacking STAC assets into xarray data.
+stackstac
+
+#
+## Data cubes and multidimensional arrays
+#
+
+# Multidimensional data-cube collection.
+datacubes
