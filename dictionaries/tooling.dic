@@ -62,6 +62,9 @@ nefrob
 # Organisation owning the shared config template.
 opbi
 
+# Local Rust code-search and MCP tool.
+Octocode
+
 # Terminal AI coding client and its OpenCode Go subscription route.
 opencode
 
@@ -132,6 +135,9 @@ SOURCESDIRECTORY
 
 # Betterleaks secret-scanning tool.
 betterleaks
+
+# Local Rust code-search and MCP tool.
+Codanna
 
 # Codebase dependency-graph tooling shorthand.
 codegraph
