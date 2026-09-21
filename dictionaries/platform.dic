@@ -1,0 +1,396 @@
+#
+## Operating systems, shells, and filesystems
+#
+
+# Apple filesystem used on macOS.
+APFS
+# macOS utility that prevents system sleep.
+caffeinate
+# Portable errno name raised when resolving a symbolic-link loop.
+ELOOP
+esac
+# Keyword argument that makes a directory walk follow symbolic links.
+followlinks
+# jq filter expression that parses a JSON string.
+fromjson
+# Process-group identifier lookup helper.
+getpgid
+greppable
+# Filesystem link that gives another path to the same inode.
+hardlink
+heredocs
+inodes
+justfiles
+keepalive
+keepends
+# Process-group termination helper.
+killpg
+# Linux operating-system name.
+linux
+# Git log flag that renders one commit per line.
+oneline
+# macOS command-line scripting bridge.
+osascript
+# Progress-bar shorthand.
+pbar
+pgid
+# Shell option that makes a pipeline fail on any failed command.
+pipefail
+preflights
+pushdown
+# Copy-on-write filesystem link.
+reflink
+# Plural form of copy-on-write filesystem links.
+reflinks
+# Process whose parent exited, re-adopted by the system init process.
+reparented
+runstate
+# Shell script static-analysis tool.
+shellcheck
+stdlib
+strippable
+syspath
+# macOS command-line UUID generator.
+uuidgen
+# File-watching CLI used by development recipes.
+watchexec
+# Windows package manager.
+winget
+# Git working-tree checkout terminology.
+worktree
+# Plural form of Git working-tree checkouts.
+worktrees
+# Zstandard compression format.
+ZSTD
+
+#
+## Editors, extensions, and language servers
+#
+
+# VS Code Better Comments extension publisher.
+aaron
+# VS Code Git integration setting key for background remote fetching.
+autofetch
+# Ruff VS Code extension publisher.
+charliermarsh
+# VS Code Markdownlint extension publisher.
+davidanson
+# VS Code ESLint extension publisher.
+dbaeumer
+# VS Code Run on Save extension publisher.
+emeraldwalk
+# VS Code Prettier extension publisher.
+esbenp
+# Jsonnet VS Code extension publisher.
+grafana
+# Jsonnet configuration language and compiler.
+jsonnet
+# Kanban Markdown upstream extension publisher.
+Lachy
+# VS Code Kanban Markdown extension publisher.
+lachyfs
+# Python language server used by the editor.
+pylance
+# VS Code inline SQL syntax extension publisher.
+qufiwefefwoyn
+# Red Hat VS Code extension publisher.
+redhat
+# VS Code setting namespace provided by Run on Save.
+runonsave
+# Ignore file that keeps development-only paths out of a packaged extension.
+vscodeignore
+# Agent Resources Ninja extension publisher.
+yamapan
+
+#
+## Browser and DOM APIs used by shared skill pages
+#
+
+# DOM events bound by the graph-twin page in skills/coding-d2/scripts.
+dblclick
+# DOM events bound by the graph-twin page in skills/coding-d2/scripts.
+keydown
+# DOM events bound by the graph-twin page in skills/coding-d2/scripts.
+mouseenter
+# DOM events bound by the graph-twin page in skills/coding-d2/scripts.
+mouseleave
+# Diagram elements the graph-twin page dims and lights.
+paintables
+# DOM events bound by the graph-twin page in skills/coding-d2/scripts.
+pointerdown
+# DOM events bound by the graph-twin page in skills/coding-d2/scripts.
+pointermove
+# DOM events bound by the graph-twin page in skills/coding-d2/scripts.
+pointerup
+# Font stack entry in the graph-twin page.
+Segoe
+# DOM event the graph-twin page uses to refit a pane that was hidden.
+visibilitychange
+
+#
+## Web platform, media, and accessibility
+#
+
+# Largest Contentful Paint, the loading metric of Core Web Vitals.
+Contentful
+# Interpolation kernel used when recutting a README hero asset.
+lanczos
+# HTTP referrer field spelling.
+referer
+# Time to First Byte.
+TTFB
+# Web Content Accessibility Guidelines.
+WCAG
+wcag
+
+#
+## Development tools and CLIs
+#
+
+# Betterleaks secret-scanning tool.
+betterleaks
+# Local Rust code-search and MCP tool.
+Codanna
+# Codebase dependency-graph tooling shorthand.
+codegraph
+# Codex file-search ignore-pattern name.
+codexignore
+# Evaluation platform named in the tooling watchlist.
+Evals
+# Agent-skill metadata table renderer.
+flintmark
+# Graphify removal record and its upstream provenance links.
+graphify
+graphifyy
+# Rust MCP SDK crate named by the transport target in captured Codex log lines.
+rmcp
+# Rust Markdown linter and formatter.
+rumdl
+# Static-analysis security scanner.
+Semgrep
+# OpenAI publish command used by the repository publish workflow.
+yeet
+
+#
+## AI providers, models, and agents
+#
+
+# Codex model name.
+astra
+# Claude Code assistant name.
+claude
+# Developer terminal multiplexer.
+cmux
+# DeepSeek AI provider or model name.
+deepseek
+# DeerFlow workflow and agent-tooling name.
+deerflow
+# Moonshot AI model name available through OpenCode Go.
+kimi
+# LangGraph agent-orchestration framework named by the Squire runner.
+langgraph
+# Tool directory excluded from the editor explorer.
+lingtai
+# Local Rust code-search and MCP tool.
+Octocode
+# Terminal AI coding client and its OpenCode Go subscription route.
+opencode
+# GitHub organisation owning the Serena MCP server.
+oraios
+# Claude Code transcript flag marking a subagent turn.
+sidechain
+# Terminal GPT command-line tool.
+tgpt
+# TypeSafe provider used by Jev MCP.
+TYPESAFE
+typesafe
+
+#
+## Hosting, cloud, CI, and secrets
+#
+
+apikey
+appsettings
+# Azure-specific project tooling shorthand.
+azured
+# Azure Functions app resource and CLI command namespace.
+functionapp
+# Git hosting provider that owns a component's repository.
+gitlab
+# Pre-commit Go environment name.
+golangenv
+# Azure Key Vault resource and CLI command namespace.
+keyvault
+# Dependency lock files that pin resolved versions.
+lockfiles
+# Azure DevOps pull-request variable token.
+PULLREQUEST
+# Azure DevOps logging command for pipeline variables.
+setvariable
+# Azure DevOps source-directory variable token.
+SOURCESDIRECTORY
+
+#
+## Excluded or retired tools
+#
+
+# Retired agent-tooling directory excluded by repository decision.
+aigx
+# Agent-memory tool excluded by repository decision.
+cognee
+# Code-documentation lookup tool excluded by repository decision.
+deepwiki
+# Code-analysis tool excluded pending Intel Mac support.
+sentrux
+
+#
+## People and accounts cited in the workspace
+#
+
+# Author name used in skill frontmatter.
+addy
+# Author name used in skill frontmatter.
+brussee
+# GitHub account owning the pinned Jev MCP source.
+burnigtm
+# Design-engineering skills repository owner cited in the skills provenance table.
+emil
+# UI-skills repository owner cited in the skills provenance table.
+ibelick
+# Organisation owning the shared config template.
+opbi
+# Author name used in skill frontmatter.
+osmani
+# Author name used in skill frontmatter.
+pocock
+
+#
+## Spelling, naming, and language corpora
+#
+
+# Domain marketplace named in the naming-tool survey.
+Afternic
+# GoDaddy AI naming and domain-search product.
+Airo
+# Invented quality of a string as a brand name.
+brandability
+brandable
+# ISO 639-3 code for Latin in WikiPron source filenames.
+clas
+# CMU pronouncing dictionary behind the English IPA data.
+CMUdict
+# French dictionary project behind the vendored French corpus.
+Dicollecte
+# Greek dictionary project behind the vendored Greek corpus.
+elspell
+# Hunspell affix flag marking a stem that is never a word on its own.
+FORBIDDENWORD
+# French grammar checker publishing the Dicollecte dictionaries.
+Grammalecte
+# ISO 15924 Greek script code in WikiPron source filenames.
+grek
+# Spell checker whose dictionaries and tools the corpus pipeline uses.
+hunspell
+# German dictionary project behind the vendored German corpus.
+igerman
+# Latin word list the vendored Latin dictionary extends.
+mlatinoo
+# Domain registrar with a bundled AI name generator.
+Namecheap
+# Prompt-to-name generator.
+Namelix
+# Prompt-to-name generator.
+Namilio
+# Hunspell affix flag marking a stem that needs an affix to be a word.
+NEEDAFFIX
+# Prompt-to-name generator.
+Nomely
+# Hunspell affix flag marking a stem that is only valid inside a compound.
+ONLYINCOMPOUND
+# Invented quality of a string being pronounceable without guidance.
+pronounceability
+respellings
+# Domain marketplace named in the naming-tool survey.
+Sedo
+# Quality of a string being spelled correctly from hearing it.
+spellability
+# Pure-Python Hunspell port used as the reference analyser.
+spylls
+# Crowdsourced naming marketplace.
+Squadhelp
+# Self-hosted Kanban board with hard WIP limits.
+Vikunja
+# Wiktionary-mined pronunciation corpus used for the IPA data.
+wikipron
+# Dictionary collection publishing the vendored corpora.
+wooorm
+
+#
+## Architecture, data, and documentation vocabulary
+#
+
+# Informal comparison run between candidate implementations.
+bakeoff
+# Plural form of informal comparison runs.
+bakeoffs
+# Data model tracking valid time and transaction time.
+bitemporal
+# Chart-form name used in visualisation guidance.
+choropleth
+# Comparable-sale values used as ranking evidence.
+comparables
+# Duplicate-removal shorthand.
+dedup
+# Abbreviated error-message identifier.
+errmsg
+fieldless
+# Metadata block at the start of a Markdown file.
+frontmatter
+# Internal capability indicating safe inspection.
+inspectable
+# Problem-solving acronym: mutually exclusive, collectively exhaustive.
+MECE
+# Internal term for resolving a name or path to the wrong target.
+misresolution
+# Quality of admitting interchangeable implementations.
+pluggability
+# Quality of a store being directly queryable.
+queryability
+# Result that can be derived again from its inputs.
+recomputable
+replayable
+resumability
+runnability
+# Markdown heading syntax written by underlining the title line.
+setext
+# Chart-form name used in visualisation guidance.
+sparkline
+# Analysis-window term used in data-coverage prose.
+timeframes
+# Chart-form name used in visualisation guidance.
+Treemap
+treemap
+unclaimable
+# Not behind an approval gate.
+ungated
+# Internal parse or runtime state shorthand.
+unparseable
+# Third-person form of an insert-or-update registry write.
+upserts
+# Product-introduction document type for a repository root README.
+whitepage
+# Obsidian-style double-bracket links, unused in this repository.
+wikilinks
+# Product-name lettering in a README hero, rendered as a heading.
+wordmark
+
+#
+## Languages, platforms, and licences
+#
+
+# Kotlin programming language.
+kotlin
+# Machine-learning platform for model workflows.
+kubeflow
+# Noncommercial license shared by the public component repositories.
+polyform

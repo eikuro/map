@@ -1,0 +1,12 @@
+#
+## Node.js, TypeScript, and VS Code packages and APIs
+#
+
+# Node.js native credential-storage module referenced by the pnpm build allow-list.
+keytar
+# pnpm workspace hook file that patches dependency resolution before install.
+pnpmfile
+# Plural form of the pnpm workspace hook file name.
+pnpmfiles
+# VS Code extension package manifest embedded inside a VSIX archive.
+vsixmanifest

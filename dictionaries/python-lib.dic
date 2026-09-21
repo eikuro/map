@@ -1,0 +1,129 @@
+#
+## Python packages and APIs
+#
+
+arange
+argmax
+asname
+# SciPy distance-function shorthand.
+cdist
+connectionpool
+# Plural of the pandas in-memory table type.
+dataframes
+# Python date and time utility library.
+dateutil
+decoratee
+# pytest environment-variable deletion helper.
+delenv
+dropna
+# NumPy floating-point error-state context.
+errstate
+fetchdf
+fillna
+fromkeys
+# Pillow image channel-mode accessor.
+getbands
+# Time-zone lookup helper from dateutil.
+gettz
+iloc
+imshow
+initargs
+metaclasses
+# NumPy N-dimensional array type.
+ndarray
+normpath
+notna
+nunique
+# Python library for parallel pandas operations.
+pandarallel
+# Python library for composing callable pipelines.
+pipetools
+readall
+# pytest environment-variable assignment helper.
+setenv
+# SOCKS protocol I/O library.
+socksio
+tolist
+# Ruff plugin for common Python anti-patterns.
+tryceratops
+urlopen
+xlim
+xpartial
+
+#
+## Python test, build, and notebook configuration
+#
+
+# pytest option configuration key.
+addopts
+autonotebook
+autoreload
+# pytest fixture scope configuration flag.
+autouse
+caplog
+capsys
+coveragerc
+docstrings
+Docstyle
+iopub
+junitxml
+kernelspec
+maxfail
+nbqa
+nbstripout
+pyrightconfig
+# Module-level pytest marker declaration.
+pytestmark
+pythonpath
+testpaths
+
+#
+## Python data, time, and visualisation vocabulary
+#
+
+ampm
+# Matplotlib rcParams keys and axes API names used in plotting recipes.
+barh
+cmap
+colormap
+colourmap
+datetimes
+datetimez
+downcasting
+# Pandas column-type name.
+dtype
+# Pandas column-type shorthand.
+dtypes
+etype
+figsize
+fontsize
+labelsize
+mdates
+mfirst
+mininterval
+miniters
+miniterval
+msecond
+mticker
+sharex
+sharey
+textcoords
+titlesize
+titleweight
+trange
+viridis
+xlabel
+xytext
+yaxis
+ylabel
+
+#
+## Python toolchain
+#
+
+# Rust-based Python packaging and build frontend.
+maturin
+# Ruff performance lint rule family.
+perflint
+# Ruff rule family that upgrades syntax for newer Python.
+pyupgrade

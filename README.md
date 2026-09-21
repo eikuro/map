@@ -18,19 +18,32 @@ paths, while this repository owns the reusable dictionaries those checks load.
 ## Capabilities
 
 Run `cspell --config cspell.config.yaml <files>` from a consumer repository to
-load the mounted dictionaries below.
+load the mounted dictionaries below. Each dictionary owns one vocabulary
+domain, and a consumer loads only the domains its sources need: the Python
+baseline loads `aurora`, `finance`, `geospatial`, `platform`, and `python-lib`,
+while the JavaScript baseline loads `aurora`, `js-lib`, and `platform`.
 
 | Dictionary | Coverage | Path |
 | --- | --- | --- |
+| Aurora | Organisation, workspace component, and internal shorthand names | [`dictionaries/aurora.dic`](dictionaries/aurora.dic) |
 | Finance | Trading, financial-data, and security-identifier vocabulary | [`dictionaries/finance.dic`](dictionaries/finance.dic) |
 | Geospatial | Geographic datasets, raster formats, and remote-sensing vocabulary | [`dictionaries/geospatial.dic`](dictionaries/geospatial.dic) |
-| Library | Python packages, APIs, and test/build configuration terms | [`dictionaries/lib.dic`](dictionaries/lib.dic) |
-| Tooling | Agent, editor, process, and project-specific vocabulary | [`dictionaries/tooling.dic`](dictionaries/tooling.dic) |
+| JavaScript library | Node, TypeScript, and VS Code package vocabulary the built-in dictionaries do not cover | [`dictionaries/js-lib.dic`](dictionaries/js-lib.dic) |
+| Platform | Operating systems, shells, editors, browsers, CLIs, hosting, and cross-language technical vocabulary | [`dictionaries/platform.dic`](dictionaries/platform.dic) |
+| Python library | Python packages, APIs, test configuration, and data-visualisation vocabulary | [`dictionaries/python-lib.dic`](dictionaries/python-lib.dic) |
+
+A word belongs to the dictionary that owns its meaning. The language
+dictionaries (`js-lib`, `python-lib`) hold vocabulary that only one runtime
+needs, `platform` holds vocabulary every repository shares, and `aurora` holds
+names that only make sense inside this workspace. The domain dictionaries
+(`finance`, `geospatial`) stay separate because only domain repositories need
+them.
 
 ## Compatibility
 
-- **PyMap**, **JSMap**, and **Quest** reference these dictionaries from their
-consumer `cspell.config.yaml` files.
+- **PyMap** and its consumers reference `aurora`, `finance`, `geospatial`,
+`platform`, and `python-lib` from their `cspell.config.yaml` files.
+- **JSMap** and its consumers reference `aurora`, `js-lib`, and `platform`.
 - **Porter** materialises `.cspell` into consumer repositories as the shared
 dictionary mount.
 - cspell owns vocabulary only; consumer repositories own file selection,

@@ -493,6 +493,8 @@ NASDAQ
 nasdaq
 # Nasdaq Mutual Fund Quotation Service code.
 NMFQS
+# Lowercase form of the Nasdaq mutual-fund exchange code in filter expressions.
+nmfqs
 # OTC Bulletin Board venue.
 OTCBB
 # OTC venue code for Canadian securities.
