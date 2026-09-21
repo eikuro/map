@@ -17,6 +17,9 @@ astra
 # Author name used in skill frontmatter.
 brussee
 
+# GitHub account owning the pinned Jev MCP source.
+burnigtm
+
 # Ruff VS Code extension publisher.
 charliermarsh
 
@@ -35,6 +38,9 @@ deepseek
 # DeerFlow workflow and agent-tooling name.
 deerflow
 
+# GitHub account owning the shared configuration repositories.
+eikuro
+
 # VS Code Run on Save extension publisher.
 emeraldwalk
 
@@ -46,6 +52,9 @@ flintmark
 
 # Git hosting provider that owns a component's repository.
 gitlab
+
+# Problem-solving acronym: mutually exclusive, collectively exhaustive.
+MECE
 
 # Moonshot AI model name available through OpenCode Go.
 kimi
@@ -100,6 +109,10 @@ ttfe
 
 # Author name used in skill frontmatter.
 Zhenyu
+
+# TypeSafe provider used by Jev MCP.
+TYPESAFE
+typesafe
 
 # GitHub account name of the repository owner.
 zhenyulin
@@ -240,6 +253,36 @@ Afternic
 # GoDaddy AI naming and domain-search product.
 Airo
 
+# ISO 639-3 code for Latin in WikiPron source filenames.
+clas
+
+# CMU pronouncing dictionary behind the English IPA data.
+CMUdict
+
+# French dictionary project behind the vendored French corpus.
+Dicollecte
+
+# Greek dictionary project behind the vendored Greek corpus.
+elspell
+
+# Hunspell affix flag marking a stem that is never a word on its own.
+FORBIDDENWORD
+
+# French grammar checker publishing the Dicollecte dictionaries.
+Grammalecte
+
+# ISO 15924 Greek script code in WikiPron source filenames.
+grek
+
+# Spell checker whose dictionaries and tools the corpus pipeline uses.
+hunspell
+
+# German dictionary project behind the vendored German corpus.
+igerman
+
+# Latin word list the vendored Latin dictionary extends.
+mlatinoo
+
 # Domain registrar with a bundled AI name generator.
 Namecheap
 
@@ -249,11 +292,20 @@ Namelix
 # Prompt-to-name generator.
 Namilio
 
+# Hunspell affix flag marking a stem that needs an affix to be a word.
+NEEDAFFIX
+
 # Prompt-to-name generator.
 Nomely
 
+# Hunspell affix flag marking a stem that is only valid inside a compound.
+ONLYINCOMPOUND
+
 # Domain marketplace named in the naming-tool survey.
 Sedo
+
+# Pure-Python Hunspell port used as the reference analyser.
+spylls
 
 # Crowdsourced naming marketplace.
 Squadhelp
@@ -261,14 +313,45 @@ Squadhelp
 # Self-hosted Kanban board with hard WIP limits.
 Vikunja
 
+# Wiktionary-mined pronunciation corpus used for the IPA data.
+wikipron
+
+# Dictionary collection publishing the vendored corpora.
+wooorm
+
 #
 ## JavaScript, TypeScript, and VS Code tooling
 #
 
+# DOM events bound by the graph-twin page in skills/coding-d2/scripts.
+dblclick
+# DOM events bound by the graph-twin page in skills/coding-d2/scripts.
+keydown
+# DOM events bound by the graph-twin page in skills/coding-d2/scripts.
+mouseenter
+# DOM events bound by the graph-twin page in skills/coding-d2/scripts.
+mouseleave
+# DOM events bound by the graph-twin page in skills/coding-d2/scripts.
+pointerdown
+# DOM events bound by the graph-twin page in skills/coding-d2/scripts.
+pointermove
+# DOM events bound by the graph-twin page in skills/coding-d2/scripts.
+pointerup
+# Diagram elements the graph-twin page dims and lights.
+paintables
+# Font stack entry in the graph-twin page.
+Segoe
+# DOM event the graph-twin page uses to refit a pane that was hidden.
+visibilitychange
+
 # VS Code ESLint extension publisher.
 dbaeumer
+# Design-engineering skills repository owner cited in the skills provenance table.
+emil
 # Jsonnet VS Code extension publisher.
 grafana
+# UI-skills repository owner cited in the skills provenance table.
+ibelick
 # Kanban Markdown upstream extension publisher.
 Lachy
 # Agent Resources Ninja extension publisher.

@@ -21,10 +21,13 @@ errstate
 fetchdf
 fillna
 fromkeys
+# Pillow image channel-mode accessor.
+getbands
 # Time-zone lookup helper from dateutil.
 gettz
 iloc
 imshow
+initargs
 metaclasses
 # NumPy N-dimensional array type.
 ndarray
@@ -103,6 +106,37 @@ msecond
 timeframes
 trange
 viridis
+# Matplotlib rcParams keys and axes API names used in plotting recipes.
+barh
+fontsize
+labelsize
+mticker
+sharex
+sharey
+textcoords
+titlesize
+titleweight
+xlabel
+xytext
+ylabel
+yaxis
+# Chart-form names used in visualisation guidance.
+choropleth
+sparkline
+Treemap
+treemap
+
+#
+## Web, accessibility, and performance vocabulary
+#
+
+# Largest Contentful Paint, the loading metric of Core Web Vitals.
+Contentful
+# Time to First Byte.
+TTFB
+# Web Content Accessibility Guidelines.
+WCAG
+wcag
 
 #
 ## Process, shell, and filesystem operations
@@ -121,6 +155,7 @@ followlinks
 fromjson
 # Process-group identifier lookup helper.
 getpgid
+greppable
 # Filesystem link that gives another path to the same inode.
 hardlink
 heredocs
@@ -147,6 +182,8 @@ pushdown
 reflink
 # Plural form of copy-on-write filesystem links.
 reflinks
+# Process whose parent exited, re-adopted by the system init process.
+reparented
 runstate
 # Shell script static-analysis tool.
 shellcheck
@@ -214,6 +251,8 @@ respellings
 referer
 resumability
 runnability
+# Markdown heading syntax written by underlining the title line.
+setext
 # Quality of a string being spelled correctly from hearing it.
 spellability
 unclaimable
@@ -221,6 +260,8 @@ unclaimable
 ungated
 # Internal parse or runtime state shorthand.
 unparseable
+# Third-person form of an insert-or-update registry write.
+upserts
 # Product-introduction document type for a repository root README.
 whitepage
 # Obsidian-style double-bracket links, unused in this repository.
