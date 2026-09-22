@@ -30,6 +30,8 @@ agentsmemory
 bttpreset
 # Internal error-construction shorthand.
 errorfactory
+# Uppercase form of the LoopX control plane, used in spec file names.
+LOOPX
 # Multi-repository workspace shorthand.
 multirepo
 # Project-specific developer tooling shorthand.
