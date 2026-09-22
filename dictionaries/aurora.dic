@@ -32,6 +32,8 @@ bttpreset
 errorfactory
 # Uppercase form of the LoopX control plane, used in spec file names.
 LOOPX
+# Uppercase form of MindFS, used in spec file names.
+MINDFS
 # Multi-repository workspace shorthand.
 multirepo
 # Project-specific developer tooling shorthand.
