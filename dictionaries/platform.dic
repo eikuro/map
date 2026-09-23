@@ -81,6 +81,8 @@ dbaeumer
 emeraldwalk
 # VS Code Prettier extension publisher.
 esbenp
+# Figma editor, its Desktop Bridge plugin, and the Figma Console MCP server.
+figma
 # Jsonnet VS Code extension publisher.
 grafana
 # Jsonnet configuration language and compiler.
@@ -114,6 +116,9 @@ keydown
 mouseenter
 # DOM events bound by the graph-twin page in skills/coding-d2/scripts.
 mouseleave
+# DOM event the question page deliberately leaves unhooked, so a reload cannot
+# end an interview that is still open.
+pagehide
 # Diagram elements the graph-twin page dims and lights.
 paintables
 # DOM events bound by the graph-twin page in skills/coding-d2/scripts.
@@ -123,18 +128,66 @@ pointermove
 # DOM events bound by the graph-twin page in skills/coding-d2/scripts.
 pointerup
 # Font stack entry in the graph-twin page.
+Consolas
+# Font stack entry in the graph-twin page.
 Segoe
 # DOM event the graph-twin page uses to refit a pane that was hidden.
 visibilitychange
 
 #
+## Browser game clients and userscripts
+#
+
+# Third-party card table and event-hook reference the falconer pilot derives from.
+daxiaochao
+# Fragment of the client's decoded message class names (`GsCGamephaseNtf`).
+Gamephase
+# Card-mode identifier in the client's deck signature (`isJunZhengBiaoZhun`).
+JUNZHENG
+# Card-mode identifier in the client's deck signature.
+junzheng
+# Upstream author of the reference userscript.
+llsccm
+# Laya, the browser game engine the client renders with, and its lowercase global.
+Laya
+laya
+# Upstream reference project the falconer pilot derives from.
+sgstools
+# Client misspelling in `CanShowPrivilegeDaliyReward`; quoted as the client spells it.
+Daliy
+# Chinese card game the falconer pilot drives (`web.sanguosha.com`).
+sanguosha
+# Browser extension that hosts userscripts.
+Tampermonkey
+# Fragment of the client's decoded message class names (`GsCModifyUserseatNtf`).
+Userseat
+# Browser script injected by a userscript manager.
+userscript
+
+#
 ## Web platform, media, and accessibility
 #
 
+# Calendar-sync protocol reaching iCloud calendars, named in the tooling
+# watchlist's integration evidence.
+caldav
 # Largest Contentful Paint, the loading metric of Core Web Vitals.
 Contentful
+# Design Tokens Community Group, the standard design-token file format.
+DTCG
+# Property of a text artefact whose changes can be reviewed as a diff.
+diffable
 # Interpolation kernel used when recutting a README hero asset.
 lanczos
+# Perceived-brightness channel in a luma/chroma colour separation.
+luma
+# Reducing an image to a coarse colour-step count.
+Posterisation
+posterize
+# Image format carrying red, green, blue, and alpha channels.
+RGBA
+# Structural Similarity Index, the image-quality metric.
+SSIM
 # HTTP referrer field spelling.
 referer
 # Time to First Byte.
@@ -149,6 +202,8 @@ wcag
 
 # Betterleaks secret-scanning tool.
 betterleaks
+# Apple Music CLI named in the tooling watchlist's integration evidence.
+clawtunes
 # Local Rust code-search and MCP tool.
 Codanna
 # Codebase dependency-graph tooling shorthand.
@@ -162,6 +217,13 @@ flintmark
 # Graphify removal record and its upstream provenance links.
 graphify
 graphifyy
+# Personal-operations agent CLI installed on this machine; the built-in
+# dictionaries carry the capitalised name only.
+hermes
+# pngquant flag that disables Floyd-Steinberg dithering.
+nofs
+# Lossy PNG quantiser used to compress logo assets.
+pngquant
 # Rust MCP SDK crate named by the transport target in captured Codex log lines.
 rmcp
 # Rust Markdown linter and formatter.
@@ -175,6 +237,8 @@ yeet
 ## AI providers, models, and agents
 #
 
+# Apple Music MCP server name in the tooling watchlist.
+applemusic
 # Codex model name.
 astra
 # Claude Code assistant name.
@@ -193,6 +257,8 @@ langgraph
 lingtai
 # Local Rust code-search and MCP tool.
 Octocode
+# Alibaba AI model family named in the skill-source lineage table.
+Qwen
 # Terminal AI coding client and its OpenCode Go subscription route.
 opencode
 # GitHub organisation owning the Serena MCP server.
@@ -255,6 +321,10 @@ brussee
 burnigtm
 # Design-engineering skills repository owner cited in the skills provenance table.
 emil
+# ClawHub publisher of the Apple Music MCP server cited in the tooling watchlist.
+epheterson
+# ClawHub publisher of the clawtunes Apple Music CLI cited in the watchlist.
+forketyfork
 # UI-skills repository owner cited in the skills provenance table.
 ibelick
 # Organisation owning the shared config template.
@@ -263,6 +333,8 @@ opbi
 osmani
 # Author name used in skill frontmatter.
 pocock
+# ClawHub publisher and OpenClaw creator; owns the official Things and gog skills.
+steipete
 
 #
 ## Spelling, naming, and language corpora
