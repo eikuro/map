@@ -4,6 +4,8 @@
 
 # Apple filesystem used on macOS.
 APFS
+# Git option that stashes and reapplies worktree changes around an operation.
+autostash
 # macOS utility that prevents system sleep.
 caffeinate
 # Portable errno name raised when resolving a symbolic-link loop.
@@ -222,6 +224,8 @@ graphifyy
 hermes
 # pngquant flag that disables Floyd-Steinberg dithering.
 nofs
+# git diff line-count format (`git diff --numstat`) read by the benchmark LOC script.
+numstat
 # Lossy PNG quantiser used to compress logo assets.
 pngquant
 # Rust MCP SDK crate named by the transport target in captured Codex log lines.
@@ -270,6 +274,28 @@ tgpt
 # TypeSafe provider used by Jev MCP.
 TYPESAFE
 typesafe
+
+#
+## Benchmark suites and evaluation sets
+#
+
+# Python bug database used as boxed benchmark task material.
+bugsinpy
+# Practice-exercise platform whose tracks form the aider polyglot benchmark.
+Exercism
+# Data-science competition platform whose competitions form MLE-bench.
+Kaggle
+kaggle
+# Biology-research agent evaluation dataset and its runner package.
+labbench
+# Evaluation organisation publishing the Task Standard, public tasks, and RE-Bench.
+METR
+# Machine-learning engineering benchmark over Kaggle competitions, and its CLI.
+mlebench
+# Real-world software-engineering issue benchmark and its CLI.
+swebench
+# Plural of evaluation run, as used in eval-suite names and reports.
+evals
 
 #
 ## Hosting, cloud, CI, and secrets
@@ -415,6 +441,8 @@ comparables
 dedup
 # Abbreviated error-message identifier.
 errmsg
+# Property of a hypothesis a benchmark result could contradict.
+failable
 fieldless
 # Metadata block at the start of a Markdown file.
 frontmatter
