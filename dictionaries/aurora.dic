@@ -15,10 +15,17 @@ zhenyulin
 
 # JavaScript and TypeScript configuration template repository name.
 jsmap
+# Shared base configuration repository name, plus the seat it is written as.
+# > caseSensitive is on, so the prose form needs its own line.
+map
+Map
 # Python configuration template repository name.
 pymap
 # Reusable Python toolkit repository name.
 pykit
+# Engineering publication repository name, plus the seat it is written as.
+chrono
+Chrono
 
 #
 ## Internal shorthands and acronyms
@@ -44,5 +51,9 @@ ntid
 osops
 # Internal shorthand for excessive claims or behavior.
 overclaim
+# Camel-case fragment of the retired Copilot Telegram extension's secret keys.
+Tele
+# Retired name of the Copilot Telegram bridge, still read for stored secrets.
+telepilot
 # Project-specific developer tooling shorthand.
 ttfe
