@@ -1,0 +1,4 @@
+MD001: false # Heading levels should only increment by one
+MD013: false # Line length limit
+MD024: false # No duplicate heading text
+MD041: false # First line in file should be a top-level heading

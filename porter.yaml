@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=../porter/schemas/manifest.json#agents-location
+---
+#
+# component metadata
+#
+private: false
+
+name: map
+type: config
+description: Shared base configuration for the language maps.
+
+github: "eikuro"
+
+ci: ""
+
+agents: ../.agents

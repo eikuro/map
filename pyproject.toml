@@ -1,0 +1,6 @@
+# Porter derives a `pyproject.toml` merge for every repository that declares a
+# `python:` section, so the base must provide this file. It is deliberately
+# empty: the shared Python baseline lives in PyMap, which is the canonical
+# mutation target for `porter python` and the source every Python consumer
+# merges. Keeping the map free of toolchain data is the point — a map that
+# carried dependency groups would become a second source for them.

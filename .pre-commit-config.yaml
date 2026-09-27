@@ -1,0 +1,54 @@
+# docs: https://pre-commit.com/#usage
+
+default_install_hook_types: [pre-commit]
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0 # `pre-commit autoupdate` to use the latest version
+    hooks:
+      - id: check-added-large-files # built-in hook id
+        name: check large files
+        args: ["--maxkb=5120"] # Set threshold to 5MB
+        stages: [pre-commit]
+
+  - repo: https://github.com/betterleaks/betterleaks
+    rev: v1.6.1
+    hooks:
+      # `betterleaks` (language: golang) is built into pre-commit's own cache and
+      # shared across repos — unlike `-system`, it needs no binary on PATH, so a
+      # fresh clone or CI runner works unattended.
+      # --redact is deliberate: without it a detected secret is echoed in full
+      # into the terminal and CI logs.
+      - id: betterleaks
+        entry: betterleaks git --pre-commit --redact --staged --log-level warn
+        pass_filenames: false
+        stages: [pre-commit]
+
+  # `language: system` hooks invoke the globally installed binaries rather than a
+  # pinned repo hook: the repo hook provisions a fresh node env in
+  # ~/.cache/pre-commit on every clean machine — a network hit not served from a
+  # cache ("Installing environment for ...cspell-cli"). Neither global binary is
+  # pinned here; upgrade it deliberately with `npm install -g <binary>`.
+  - repo: local
+    hooks:
+      # `--files` is deliberately absent. With it, cspell treats the filenames
+      # pre-commit appends as `--files` values and reports nothing for any input
+      # (measured 2026-09-27 on cspell 10.0.1: a tracked file of gibberish
+      # exited 0 through the hook and 1 through a plain invocation). Positional
+      # paths are the working form; the maps still carry the broken entry and
+      # converge on this one with board card PYM-003.
+      - id: cspell
+        name: spell-check staged markdown and config files
+        language: system
+        entry: cspell --no-must-find-files --no-progress --no-summary --gitignore
+        files: \.(ini|jsonc|jsonnet|just|md|ya?ml)$
+        stages: [pre-commit]
+        verbose: true
+
+      - id: markdownlint-cli2
+        name: lint staged markdown files
+        language: system
+        entry: markdownlint-cli2
+        files: \.md$
+        stages: [pre-commit]
+        verbose: true
