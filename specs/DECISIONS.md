@@ -115,46 +115,49 @@ language assets, and a second source would break the one-base model.
 Reopen if a shared dictionary need appears that is not language-typed, or when a
 non-Python consumer needs a pipeline.
 
-## DEFERRED
+## DECIDED
 
 ### PyMap consumption
 
 Scope: `../pymap/porter.yaml`
 Type: `technical`
 
-JSMap consumes this base today: `porter config` materialises the five shared
-files and `porter config --dry` reports `OK Porter outputs are consistent`.
-PyMap cannot yet, and the blocker is measured rather than assumed.
+Both maps consume this base. JSMap materialises the five shared files with no
+Porter change at all; PyMap needed one relaxation, and the shape of the problem
+is worth keeping because it is not obvious from the manifest.
 
 A `python:` section makes a component *Python*, and Porter then derives a
 `pyproject.toml` merge from the base. PyMap declares one (`version`,
 `influence`) because `porter python` requires a `type: config` component, and
-that same command is what keeps PyMap's Python-version targets authoritative.
-The derived overlay removes the `notebook` dependency group from every
+that command is what keeps PyMap's Python-version targets authoritative. The
+derived overlay used to remove the `notebook` dependency group from every
 non-worker component (`_dependency_group_overlay`), and PyMap's
 `pyproject.toml` is the baseline every Python consumer merges: a render on
 2026-09-28 produced a file with **zero** occurrences of `notebook`, because
-`deep_merge` pops a `None` overlay value. The same render also drops the file's
-comment blocks and re-serialises its four-space arrays at two spaces.
+`deep_merge` pops a `None` overlay value. Every worker would have lost
+`ipykernel`, `nbqa` and `nbstripout` on its next render, and the `nbstripout`
+pre-commit hook would have failed for want of the tool. Declaring the group in
+PyMap's manifest did not help (the overlay set it to `None` regardless), and
+declaring PyMap a `worker` would have kept the group but `porter python` refuses
+anything that is not a `config` component.
 
-So the render would remove `ipykernel`, `nbqa` and `nbstripout` from PyMap's
-copy, and every worker would lose them on its next render — the `nbstripout`
-pre-commit hook would then fail for want of the tool. Declaring the group in
-PyMap's own manifest does not help: the overlay sets it to `None` regardless of
-what the manifest authors. Declaring PyMap a `worker` would keep the group but
-`porter python` refuses anything that is not a `config` component, so the two
-contracts currently have no component type that satisfies both.
+The resolution was the narrowest of the three candidates: a `config` component
+now keeps the template's group (`declares_notebook_group` in Porter's model),
+while the scaffold's notebook *directory* keeps following the narrower
+worker-only rule, because a config component owns no notebook directory. Worker
+manifests were left alone, so the dependency list stays in one place.
 
-Three resolutions were identified, none taken:
+Two further defects surfaced while propagating, both fixed in Porter rather than
+worked around here:
 
-| Option | Change | Cost |
-| --- | --- | --- |
-| Declare the group in worker manifests | Add `python.dependency-groups.notebook` to each worker's manifest and to the scaffold path | Duplicates the dependency list per worker, and `porter init` must emit it |
-| Keep the template's group in a `config` component | One-line relaxation in `_dependency_group_overlay`, plus a porter test and decision entry | Changes a released contract in `../../porter` |
-| Leave PyMap outside the base relation | PyMap mirrors the shared files by hand | A shared change is applied twice, so the extraction only half delivers |
+- A manifest's `.gitignore` entries were re-appended on every render whenever
+  the managed symlink block had become unnecessary, because the suffix check
+  then compared two different blocks. Every consumer with a `.gitignore:` key
+  and a symlink grew a duplicated rule per run.
+- A repo whose `.gitignore` had no `# Repo-specific Entries` heading had its
+  whole body treated as repo entries and appended below the new boundary. Chest
+  was in that state and now carries the heading.
 
-PyMap's manifest therefore carries no `config:` key, the five files are kept
-byte-identical to this repository, and its `porter.yaml` records the same
-finding beside the manifest key that would activate it.
-
-Reconsider when one of the three resolutions is chosen.
+`LICENSE` materialises in every consumer whose manifest declares it, so the
+PolyForm text now reaches repositories that carried none (Miller, Smith, Saga)
+and replaces MIT where a map had it (JSMap, Squire).
