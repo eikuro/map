@@ -1,6 +1,6 @@
 <!-- markdownlint-disable MD033 MD041 -->
 <p align="center">
- <img alt="cspell" src="cspell.png" width="160">
+ <img alt="cspell" src="logo.png" width="160">
 </p>
 
 <h3 align="center">cspell</h3>
