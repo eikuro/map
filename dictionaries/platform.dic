@@ -307,6 +307,9 @@ appsettings
 azured
 # Azure Functions app resource and CLI command namespace.
 functionapp
+# Git hosting provider that owns a component's repository; the base's
+# dictionaries carry only the capitalised form of the name.
+github
 # Git hosting provider that owns a component's repository.
 gitlab
 # Pre-commit Go environment name.

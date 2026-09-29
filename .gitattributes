@@ -1,8 +1,2 @@
 ## generated files
-pnpm-lock.yaml binary
-uv.lock binary
 .vscode/settings.json binary
-
-## notebooks
-*.ipynb diff=ipynb
-*.ipynb filter=nbstripout

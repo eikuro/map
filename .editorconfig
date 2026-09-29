@@ -1,8 +1,6 @@
-# EditorConfig is the shared indentation policy: an editor or format tool reads
-# it while editing, and nothing rewrites existing bytes. The widths here were
-# measured across the workspace's tracked files — two spaces is the modal width
-# for shell, CSS, HTML, YAML, JSON, D2 and markdown, while Python (PEP 8), INI,
-# justfile and Dockerfile are four.
+# EditorConfig policy: it sets indentation for new text and never rewrites
+# existing bytes. Two spaces is the measured modal width — shell, CSS, HTML,
+# YAML, JSON, D2 and markdown.
 root = true
 
 [*]
@@ -13,11 +11,11 @@ indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.py]
+# Python is four by PEP 8 and `indent-width`; the recipe, build-step and ini
+# bodies are four here, and `just` cannot parse a recipe mixing two and four.
+[{*.ini,*.just,*.py,Dockerfile,justfile}]
 indent_size = 4
 
-[{Dockerfile,justfile,*.ini,*.just}]
-indent_size = 4
-
+# Preserves intentional hard breaks (two trailing spaces).
 [*.md]
 trim_trailing_whitespace = false

@@ -11,15 +11,14 @@ repos:
         args: ["--maxkb=5120"] # Set threshold to 5MB
         stages: [pre-commit]
 
-  - repo: https://github.com/betterleaks/betterleaks
-    rev: v1.6.1
+  - repo: local
     hooks:
-      # `betterleaks` (language: golang) is built into pre-commit's own cache and
-      # shared across repos — unlike `-system`, it needs no binary on PATH, so a
-      # fresh clone or CI runner works unattended.
+      # Requires Betterleaks on PATH; see the Map README for CLI setup.
       # --redact is deliberate: without it a detected secret is echoed in full
       # into the terminal and CI logs.
       - id: betterleaks
+        name: scan staged changes for secrets
+        language: system
         entry: betterleaks git --pre-commit --redact --staged --log-level warn
         pass_filenames: false
         stages: [pre-commit]

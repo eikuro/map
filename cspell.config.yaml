@@ -1,0 +1,26 @@
+version: "0.2"
+
+language: en-GB, en-US
+caseSensitive: true
+
+dictionaryDefinitions:
+  - name: aurora
+    path: .cspell/aurora.dic
+    addWords: true
+  - name: platform
+    path: .cspell/platform.dic
+    addWords: true
+
+dictionaries:
+  - filetypes
+  - software-tools
+  - softwareTerms
+  - aurora
+  - platform
+
+ignorePaths:
+  - .serena/project.yml
+
+ignoreRegExpList:
+  # ANSI color codes
+  - '\\x1b\[[0-9;]*m'
