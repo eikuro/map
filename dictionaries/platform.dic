@@ -11,6 +11,8 @@ caffeinate
 # Portable errno name raised when resolving a symbolic-link loop.
 ELOOP
 esac
+# ps column that reports how long a process has been running.
+etime
 # Keyword argument that makes a directory walk follow symbolic links.
 followlinks
 # jq filter expression that parses a JSON string.
@@ -52,6 +54,8 @@ shellcheck
 stdlib
 strippable
 syspath
+# Git commits that exist locally but have not reached the remote.
+unpushed
 # macOS command-line UUID generator.
 uuidgen
 # File-watching CLI used by development recipes.
@@ -212,6 +216,8 @@ Codanna
 codegraph
 # Codex file-search ignore-pattern name.
 codexignore
+# Environment-file convention named by the `just --no-dotenv` flag.
+dotenv
 # Evaluation platform named in the tooling watchlist.
 Evals
 # Agent-skill metadata table renderer.
@@ -228,6 +234,8 @@ nofs
 numstat
 # Lossy PNG quantiser used to compress logo assets.
 pngquant
+# Python test runner named in the workspace permission lists.
+pytest
 # Rust MCP SDK crate named by the transport target in captured Codex log lines.
 rmcp
 # Rust Markdown linter and formatter.
@@ -259,6 +267,8 @@ kimi
 langgraph
 # Tool directory excluded from the editor explorer.
 lingtai
+# Raw next-token scores a language model emits before normalisation.
+logits
 # Local Rust code-search and MCP tool.
 Octocode
 # Alibaba AI model family named in the skill-source lineage table.
@@ -269,6 +279,8 @@ opencode
 oraios
 # Claude Code transcript flag marking a subagent turn.
 sidechain
+# Normalisation that turns model scores into a probability distribution.
+softmax
 # Terminal GPT command-line tool.
 tgpt
 # TypeSafe provider used by Jev MCP.
@@ -344,6 +356,8 @@ sentrux
 
 # Author name used in skill frontmatter.
 addy
+# Given name of Andrej Karpathy, whose LLM lectures the Saga manuscript cites.
+Andrej
 # Author name used in skill frontmatter.
 brussee
 # GitHub account owning the pinned Jev MCP source.
@@ -356,6 +370,8 @@ epheterson
 forketyfork
 # UI-skills repository owner cited in the skills provenance table.
 ibelick
+# AI researcher; his token-stream lectures are cited by the Saga manuscript.
+Karpathy
 # Organisation owning the shared config template.
 opbi
 # Author name used in skill frontmatter.
@@ -451,6 +467,8 @@ fieldless
 frontmatter
 # Internal capability indicating safe inspection.
 inspectable
+# LaTeX macro that sets function names upright in typeset formulas.
+mathrm
 # Problem-solving acronym: mutually exclusive, collectively exhaustive.
 MECE
 # Internal term for resolving a name or path to the wrong target.
@@ -464,6 +482,8 @@ recomputable
 replayable
 resumability
 runnability
+# Software Development Life Cycle: the delivery process the AIDE reframing extends.
+SDLC
 # Markdown heading syntax written by underlining the title line.
 setext
 # Chart-form name used in visualisation guidance.
