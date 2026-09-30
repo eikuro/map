@@ -19,10 +19,13 @@ _*
 ## root runtime output
 # > ignore all root cache dir, e.g. ruff_cache
 # > ignore the shared storage mount, which holds data outside the repository
-# > keep the output directory but not its content
+# > keep the output directory but not its content; `.gitkeep` is what keeps the
+# > directory itself in the repository
 /*cache*/
-/log*/
+/log/
+/logs/
 /output/*
+!/output/.gitkeep
 /storage
 
 ## tooling output root dir
@@ -30,9 +33,10 @@ _*
 /tmp/
 
 ## tooling output files
-# > D2 HTML twins are local render aids; the committed artefact is the SVG twin
+# > D2 twins are local render aids; the committed artefact is the D2 source
 *.log
 docs/**/*.html
+docs/**/*.svg
 
 ## consumer config symlinks
 # > repositories that own real copies re-include them in Repo-specific Entries
@@ -41,6 +45,8 @@ docs/**/*.html
 ## consumer agent symlinks
 # > .* symlinks already ignored
 /AGENTS.md
+/.github/agents
+/.github/copilot-instructions.md
 harnesses/claude/skills
 
 #
@@ -58,6 +64,12 @@ harnesses/claude/skills
 !.gitattributes
 !.gitignore
 !.gitkeep
+
+## repository metadata
+# > a trailing / allows real directories; Git still ignores symlinks, and the
+# > agent links inside `.github` stay ignored through the managed block Porter
+# > appends, so only the real workflow files become trackable
+!/.github/
 
 ## agent and editor discovery
 # > a trailing / allows real directories; Git still ignores symlinks
