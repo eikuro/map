@@ -4,6 +4,9 @@
 
 # Node.js native credential-storage module referenced by the pnpm build allow-list.
 keytar
+# Node.js `child_process` error code for a missing executable, checked when a
+# spawned tool such as `porter` is absent from PATH.
+enoent
 # pnpm workspace hook file that patches dependency resolution before install.
 pnpmfile
 # Plural form of the pnpm workspace hook file name.

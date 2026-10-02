@@ -56,6 +56,8 @@ language configuration, ignore paths, and application code.
 - The `.dic` files beside this README are the maintained word lists.
 - [`../.cspell`](../.cspell) is the link this directory is reached through, so
 every layer names the vocabulary by the same `.cspell` path.
-- [`cspell.config.yaml`](../cspell.config.yaml) is the base's entry config, which
-names the language-neutral dictionaries here; a map adds its own coverage.
+- [`cspell.map.yaml`](../cspell.map.yaml) is the base's CSpell definitions, which
+name the language-neutral dictionaries here; a map adds its own coverage.
+- [`cspell.config.yaml`](../cspell.config.yaml) is the entry a repository links,
+so these dictionaries are read from this directory wherever the entry resolves.
 - Consumer repositories provide the `cspell.config.yaml` invocation surface.

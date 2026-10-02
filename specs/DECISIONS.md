@@ -137,6 +137,31 @@ For the same reason `.ci/` and `.infra/` stay in PyMap: they are ADO and Azure
 assets (container, function and bicep) rather than language assets, and a second
 source would break the one-base model.
 
+### Reach the shared CSpell defaults through a linkable entry
+
+Scope: `cspell.config.yaml`, `cspell.map.yaml`, `../.agents/cspell.config.yaml`
+Type: `convention`
+
+cspell finds a configuration by filename, so this repository's own content has
+to keep the discovered name to be read here. A repository that *links* that file
+gets a configuration whose every dictionary path resolves beside the link, not
+beside the definitions — so a linking repository needs a `.cspell` link of its
+own, and one with no language additions would repeat the import by hand.
+
+There are therefore two files. `cspell.map.yaml` holds the definitions and is
+not a discoverable name; `cspell.config.yaml` is a two-line entry that imports
+it. cspell resolves an imported file's paths beside that file, so the
+dictionaries stay in `map/` however the entry is reached, and the tree links the
+entry instead of carrying its own copy of the import. Symlinking the definitions
+file instead was rejected because it moves resolution back to the link's
+directory.
+
+The name generalises: `<tool>.<map>.yaml` holds a map layer's content, and the
+discovered `<tool>.config.yaml` stays the entry. Reopen if cspell stops
+resolving an imported file's relative paths beside that file, which the whole
+mechanism depends on, or if a layer needs the discovered filename for content of
+its own.
+
 ### PyMap consumption
 
 Scope: `../pymap/porter.yaml`
@@ -212,3 +237,26 @@ already declares the identity, and its `private` flag stays the owner's decision
 Reopen if a domain map takes ownership of `finance` or `geospatial`, which would
 move those dictionaries out of the base, or if a repository appears that needs
 the vocabulary without naming a map.
+
+### Ignore `.github` in the body and let Porter stage a declared copy
+
+Scope: `.gitignore`
+Type: `technical`
+
+The body's dot-file blacklist ignores `.github`, and Git cannot re-include a
+file whose parent directory is excluded, so a workflow beneath it needed a
+`!/.github/` exemption — which in turn obliged the body to name the two agent
+links inside that directory, because an un-ignored parent stops `[._]*` covering
+them. Dropping the exemption removes all three lines, and nothing has to be
+enumerated per link.
+
+Whether the file is committed moves to the write. A shared workflow is declared
+as a path-named copy key, and `porter config` stages each declared copy Git
+reports as ignored, so the run that writes the file is the run that adds it.
+The cost is a workflow authored by hand rather than declared: it needs
+`git add -f`, and an uncommitted workflow is invisible to `git add -A`.
+`porter config --dry` compares content on disk and never consults the index, so
+the staging step is the only thing that can report that gap.
+
+Reopen if a repository needs a hand-authored workflow no manifest declares, or
+if a declared copy is ignored for a reason staging should not override.

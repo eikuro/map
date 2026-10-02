@@ -75,6 +75,8 @@ ZSTD
 
 # VS Code Better Comments extension publisher.
 aaron
+# VS Code Project Manager extension publisher.
+alefragnani
 # VS Code Git integration setting key for background remote fetching.
 autofetch
 # Ruff VS Code extension publisher.
@@ -218,6 +220,10 @@ codegraph
 codexignore
 # Environment-file convention named by the `just --no-dotenv` flag.
 dotenv
+# Temporary-file helper used by shell recipes and their `trap` cleanup.
+mktemp
+# Database name and connection-scheme fragments in credential-leak test fixtures.
+postgres
 # Evaluation platform named in the tooling watchlist.
 Evals
 # Agent-skill metadata table renderer.
@@ -392,6 +398,8 @@ Airo
 # Invented quality of a string as a brand name.
 brandability
 brandable
+# Whether a commission card may be claimed without user action.
+claimability
 # ISO 639-3 code for Latin in WikiPron source filenames.
 clas
 # CMU pronouncing dictionary behind the English IPA data.
@@ -517,3 +525,22 @@ kotlin
 kubeflow
 # Noncommercial license shared by the public component repositories.
 polyform
+
+#
+## Proxy clients and network paths
+#
+
+# Clash.Meta core that Clash Verge runs as its proxy engine, named by the atlas
+# network view and its build script.
+mihomo
+
+#
+## Plotting libraries used by shared skill pages
+#
+
+# Python plotting library named in the data-visualisation skill.
+matplotlib
+# Python interactive charting library named in the same skill.
+plotly
+# Python statistical plotting library named in the same skill.
+seaborn

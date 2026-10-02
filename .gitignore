@@ -2,94 +2,63 @@
 ##   Blacklist
 #
 
-## Global Conventions
-# > a leading dot and a leading underscore are ignored everywhere
+## Global Convention
+# > .* files and dirs would be ignored globally, add targeted exception when needed
 .*
-_*
 
-## common build, test, packaging root output
+## Tooling Output Dirs
+# > conventional names ignored globally, add targeted exception when needed
+*.log
+*cache*/
+coverage/
+log/
+logs/
+report/
+temp/
+tmp/
+
+## Package Build Root Output
 /build/
-/Formula/
-/coverage/
 /dist/
+/Formula/
 /out/
 /releases/
-/report/
 
-## root runtime output
-# > ignore all root cache dir, e.g. ruff_cache
-# > ignore the shared storage mount, which holds data outside the repository
-# > keep the output directory but not its content; `.gitkeep` is what keeps the
-# > directory itself in the repository
-/*cache*/
-/log/
-/logs/
+## Src Output Root Dir
 /output/*
-!/output/.gitkeep
 /storage
 
-## tooling output root dir
-/temp/
-/tmp/
-
-## tooling output files
-# > D2 twins are local render aids; the committed artefact is the D2 source
-*.log
-**/graph/**/*.html
-**/graph/**/*.svg
-
-## consumer config symlinks
+## Symlinks Escaped .*
 # > repositories that own real copies re-include them in Repo-specific Entries
-/cspell.config.yaml
-/justfile
-
-## consumer agent symlinks
-# > .* symlinks already ignored
 /AGENTS.md
-/.github/agents
-/.github/copilot-instructions.md
+/cspell.config.yaml
+/Dockerfile
+/justfile
 harnesses/claude/skills
 
 #
 ##   Whitelist
 #
 
-## Global Exceptions
-# allow __ module paths (e.g. __init__.py, __tests__/, __fixtures__/); a single
-# _ stays ignored
-!__*.*
-!__*/
-
-## Git metadata files
+## Git Metadata Files
 # > explicit names keep .git and .github ignored by file walkers too
 !.gitattributes
 !.gitignore
 !.gitkeep
 
-## repository metadata
-# > a trailing / allows real directories; Git still ignores symlinks, and the
-# > agent links inside `.github` stay ignored through the managed block Porter
-# > appends, so only the real workflow files become trackable
-!/.github/
+## .github for copilot configs and github actions
+# > `.github` is kept ignored, use `git add -f` to track github action workflows
 
-## agent and editor discovery
-# > a trailing / allows real directories; Git still ignores symlinks
+## Agent Discovery Root Exceptions
+# > keep /.agents, /.vscode symlinks ignored, but make their content discoverable
 !/.agents/
 !/.vscode/
-
-#
-## Exceptions for Whitelist
-#
-
-# re-enable .* in .agents/ after whitelist
-.agents/**/.*
-
 
 #
 ##   Repo-specific Entries
 #
 
-## track real config files
+## Real Config File Exceptions
 !/.editorconfig
 !/.markdownlint.yaml
 !/.pre-commit-config.yaml

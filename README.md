@@ -29,7 +29,8 @@ every consumer inherits them from the map.
 | [`.markdownlint.yaml`](.markdownlint.yaml) | copy | Markdown rules the organisation disables, not language rules |
 | [`.gitattributes`](.gitattributes) | rendered body | Shared binary-file attributes; language maps add their lockfile attributes |
 | [`.gitignore`](.gitignore) | rendered body | Common ignore rules; a language map extends the body before the consumer boundary |
-| [`cspell.config.yaml`](cspell.config.yaml) | import | Shared language-neutral defaults, exclusions, and organisation vocabulary; maps add language coverage and dictionaries |
+| [`cspell.config.yaml`](cspell.config.yaml) | import | The base's CSpell entry; a repository with no language additions links this file instead of repeating the import |
+| [`cspell.map.yaml`](cspell.map.yaml) | import | Shared language-neutral defaults, exclusions, and organisation vocabulary; maps add language coverage and dictionaries |
 | [`dictionaries/`](dictionaries/) | mount | Shared vocabulary, one dictionary per domain; the base links it as `.cspell`, and a consumer's `.cspell` link resolves to it through its map, so the words a repository accepts are reviewed once |
 | [`.pre-commit-config.yaml`](.pre-commit-config.yaml) | copy | Shared commit hooks, including the staged Betterleaks secret scan |
 
@@ -51,19 +52,19 @@ components by its template.
   Python consumer receives it as a Porter link, while a Node consumer receives and
   commits a copy.
 - Python's `__pycache__` rule stays in PyMap and follows the `!__*/` whitelist,
-  because the `_*` blacklist is what otherwise keeps bytecode out.
+  because the `[._]*` blacklist is what otherwise keeps bytecode out.
 
 ## Compatibility boundaries
 
 - **The map owns no toolchain for its consumers.** It carries no CI and no
-  package manifest. [`cspell.config.yaml`](cspell.config.yaml) provides only
+  package manifest. [`cspell.map.yaml`](cspell.map.yaml) provides only
   language-neutral CSpell defaults and shared vocabulary; PyMap and JSMap add
   their own file coverage, built-in dictionaries, and language vocabularies.
 - **The vocabulary is mounted, not materialised.** `.cspell` is the vocabulary
   path at every layer: this repository links [`dictionaries/`](dictionaries/) as
   `.cspell`, a map links its own `.cspell` here, and a consumer links its
   `.cspell` to its map's, so no copy exists below the base.
-  [`cspell.config.yaml`](cspell.config.yaml) names the dictionaries, so a word
+  [`cspell.map.yaml`](cspell.map.yaml) names the dictionaries, so a word
   and the file that loads it change together.
 - **PyMap owns its `pyproject.toml` baseline.** Porter derives a Python TOML
   overlay from PyMap's manifest and does not require the config base to carry a

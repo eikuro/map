@@ -1,26 +1,10 @@
 version: "0.2"
 
-language: en-GB, en-US
-caseSensitive: true
-
-dictionaryDefinitions:
-  - name: aurora
-    path: .cspell/aurora.dic
-    addWords: true
-  - name: platform
-    path: .cspell/platform.dic
-    addWords: true
-
-dictionaries:
-  - filetypes
-  - software-tools
-  - softwareTerms
-  - aurora
-  - platform
-
-ignorePaths:
-  - .serena/project.yml
-
-ignoreRegExpList:
-  # ANSI color codes
-  - '\\x1b\[[0-9;]*m'
+# The base's CSpell entry: a repository links this file instead of copying the
+# import. The target is written from the caller's own directory, so it names
+# this repository when read here and the sibling `map` checkout when read
+# through a link. cspell resolves the imported file's paths beside that file,
+# so the dictionaries below resolve in `map/`, and a repository that links this
+# entry needs no `.cspell` link of its own.
+import:
+  - ../map/cspell.map.yaml
